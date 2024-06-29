@@ -12,6 +12,7 @@ function App() {
                 activeBoardId={activeBoardId}
                 setActiveBoardId={setActiveBoardId}
             />
+            <div className={board}></div>
             <div>
                 <button className={buttons}>이 게시판 삭제하기</button>
                 <button className={buttons}>활동 목록 보이기</button>

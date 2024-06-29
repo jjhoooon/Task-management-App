@@ -1,6 +1,10 @@
-import React from "react";
+import React, { FC } from "react";
 
-const SideForm = () => {
+type TSideFormProps = {
+    setIsFormOpen: boolean;
+};
+
+const SideForm: FC<TSideFormProps> = ({ setIsFormOpen }) => {
     return <div>SideForm</div>;
 };
 
