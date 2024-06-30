@@ -10,12 +10,12 @@ type TActionButtonProps = {
 };
 
 const ActionButton: FC<TActionButtonProps> = ({ boardId, listId, list }) => {
-    const [isFormOpen, setisFormOpen] = useState(false);
+    const [isFormOpen, setIsFormOpen] = useState(false);
     const buttonText = list ? "새로운 리스트 등록" : "새로운 일 등록";
 
     return isFormOpen ? (
         <DropDownForm
-            setisFormOpen={setisFormOpen}
+            setIsFormOpen={setIsFormOpen}
             list={list ? true : false}
             boardId={boardId}
             listId={listId}
@@ -23,7 +23,7 @@ const ActionButton: FC<TActionButtonProps> = ({ boardId, listId, list }) => {
     ) : (
         <div
             className={list ? listButton : taskButton}
-            onClick={() => setisFormOpen(true)}
+            onClick={() => setIsFormOpen(true)}
         >
             <IoIosAdd />
             <p>{buttonText}</p>
